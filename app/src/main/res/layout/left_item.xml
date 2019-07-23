@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="14dp">
+
+    <com.lixm.weixinscreenshot.RoundAngleFrameLayout
+        android:id="@+id/raf"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        app:radius="3.5dp">
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/default_avatar"
+            />
+    </com.lixm.weixinscreenshot.RoundAngleFrameLayout>
+
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/adl"
+        android:lineSpacingExtra="6dp"
+        android:text="我们家宝"
+        android:textColor="#181818"
+        android:textSize="14dp" />
+
+</LinearLayout>

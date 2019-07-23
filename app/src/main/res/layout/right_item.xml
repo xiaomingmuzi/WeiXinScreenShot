@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:text="15:23"
+        android:textColor="#999999"
+        android:textSize="9dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="50dp">
+
+        <com.lixm.weixinscreenshot.RoundAngleFrameLayout
+            android:id="@+id/raf"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            app:radius="3.5dp">
+
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@mipmap/default_avatar"
+
+                />
+        </com.lixm.weixinscreenshot.RoundAngleFrameLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/raf"
+            android:background="@drawable/ado"
+            android:lineSpacingExtra="6dp"
+            android:text="我们家宝，每天晚上10点就开始动弹个不行，一直造房子;我们家宝，每天晚上10点就开始动弹个不行，一直造房子"
+            android:textColor="#181818"
+            android:textSize="14dp" />
+
+        <com.lixm.weixinscreenshot.RoundAngleFrameLayout
+            android:id="@+id/img_rafl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/raf"
+            app:radius="3.5dp">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="@mipmap/share_img"
+                android:maxWidth="70dp"
+                android:maxHeight="140dp" />
+
+        </com.lixm.weixinscreenshot.RoundAngleFrameLayout>
+
+    </RelativeLayout>
+</LinearLayout>

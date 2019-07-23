@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f3f4f5"
+    android:padding="10dip">
+
+    <LinearLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/left_text_or_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dip"
+            android:paddingEnd="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            >
+
+            <ImageView
+                android:id="@+id/text"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lcs_keyboard"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/voice"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lcs_voices" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dip"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_circle_bg"
+                android:maxHeight="79dp"
+                android:minHeight="31dp"
+                android:paddingStart="8dip"
+                android:paddingTop="3dp"
+                android:paddingEnd="8dip"
+                android:paddingBottom="3dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/color_5a"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/voice_input"
+                android:layout_width="match_parent"
+                android:layout_height="31dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/white_circle_bg"
+                android:gravity="center"
+                android:textColor="@color/color_5a"
+                android:textSize="14dp"
+                android:text="按住说话"
+                android:visibility="gone"
+               />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/right_text_or_biaoqing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dip"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="5dip"
+            android:paddingEnd="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <ImageView
+                android:id="@+id/text1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lcs_keyboard"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/biaoqing"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lcs_smiley" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dip"
+            android:paddingEnd="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/textview_to_send"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:background="@drawable/rc_btn_send"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lcs_extend" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_chat"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rela"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/ativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:padding="5dip"
+        android:visibility="gone"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dip">
+
+            <LinearLayout
+                android:id="@+id/picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/rc_ic_picture" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_horizontal"
+                    android:text="图片" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/rc_ic_camera" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_horizontal"
+                    android:text="相机" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/redpakage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/add_redpacket" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_horizontal"
+                    android:text="红包" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
